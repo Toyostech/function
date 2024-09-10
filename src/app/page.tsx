@@ -1,95 +1,52 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Navigations from "@/component/Navigation/Navigations";
+import Card from "@/component/card/Card";
+import Footer from "@/component/card/Footer";
+import Contact from "@/component/contact/Contact";
+import Dcard from "@/component/dCardReandering/Dcard";
+import Container from "@/component/project1/container/Container";
+import Main_page from "@/component/meme-gen/main_page";
+import Counter from "@/component/counter/Counter";
+import Form from "@/component/form/Form";
+import Sign_In from "@/component/sign_inpage/Sign_In";
+
+import { url } from "inspector";
+import Navigated from "@/component/Navigate/Navigated";
 
 export default function Home() {
+  throw new Error("Error in Home ")
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <main className={styles.main} style={{
+      background: "url(ball.jpg) center center/cover no-repeat", 
+      
+      textAlign: "center",
+      justifyContent: "center",
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+    }}>
+      <video src="/video-2(1).mp4" autoPlay loop muted style={{
+        objectFit: "cover",
+        position: "fixed",
+        width: "100%",
+        height: "100%",
+        zIndex: -1,
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+      }}/>
+      
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      <Navigations />
+      
+      <Main_page />
+      <Form/>
+      <Sign_In/>
+      <Counter/>
+      
+      <Card />
+      <Container />
+      <Contact />
+      <Dcard />
+      <Footer />
     </main>
   );
 }
